@@ -24,7 +24,7 @@ void printKMap(const string& title, bool (*func)(int, int, int)) {
 }
 bool f1(int x, int y, int z) { return (x && y) || z; }
 bool f2(int x, int y, int z) { return x || (!(y && z)); }
-bool f3(int x, int y, int z) { return (!x)  y  z; }
+bool f3(int x, int y, int z) { return (!x);  y;  z; }
 int main() {
     printKMap("(x and y or z)", f1);
     printKMap("(x or (not(y and z)))", f2);
